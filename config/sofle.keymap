@@ -42,6 +42,11 @@
             bindings = <&email>;
             key-positions = <2 3 4>;
         };
+
+        delete {
+            bindings = <&kp DELETE>;
+            key-positions = <24 55>;
+        };
     };
 
     behaviors {
@@ -99,11 +104,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp NUMBER_1        &kp N2  &kp N3    &kp N4         &kp N5    &kp N6                                                   &kp N7                       &kp N8          &kp N9    &kp N0     &kp MINUS   &kp EQUAL
-&kp TAB             &kp Q   &kp W     &kp E          &kp R     &kp T                                                    &kp Y                        &kp U           &kp I     &kp O      &kp P       &kp LEFT_BRACKET
-&sticky LEFT_SHIFT  &kp A   &kp S     &kp D          &kp F     &kp G                                                    &kp H                        &kp J           &kp K     &kp L      &kp SEMI    &hold_tap_keys RIGHT_SHIFT SINGLE_QUOTE
-&kp LCTRL           &kp Z   &kp X     &kp C          &kp V     &kp B                    &kp LS(LG(M))    &kp CAPSLOCK   &kp N                        &kp M           &kp UP    &kp COMMA  &kp PERIOD  &kp SLASH
-                            &kp LGUI  &kp LESS_THAN  &kp LALT  &hold_tap_layer 1 SPACE  &kp RET          &kp BACKSPACE  &hold_tap_layer 1 BACKSPACE  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT
+&kp NUMBER_1        &kp N2  &kp N3    &kp N4         &kp N5    &kp N6                                                   &kp N7                    &kp N8          &kp N9    &kp N0     &kp MINUS   &kp EQUAL
+&kp TAB             &kp Q   &kp W     &kp E          &kp R     &kp T                                                    &kp Y                     &kp U           &kp I     &kp O      &kp P       &kp LEFT_BRACKET
+&sticky LEFT_SHIFT  &kp A   &kp S     &kp D          &kp F     &kp G                                                    &kp H                     &kp J           &kp K     &kp L      &kp SEMI    &hold_tap_keys RIGHT_SHIFT HASH
+&kp LCTRL           &kp Z   &kp X     &kp C          &kp V     &kp B                    &kp LS(LG(M))    &kp CAPSLOCK   &kp N                     &kp M           &kp UP    &kp COMMA  &kp PERIOD  &kp SLASH
+                            &kp LGUI  &kp LESS_THAN  &kp LALT  &hold_tap_layer 1 SPACE  &kp RET          &kp BACKSPACE  &hold_tap_layer 1 DELETE  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -121,11 +126,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp F1  &kp F2            &kp F3          &kp F4          &kp F5      &kp F6                       &kp F7      &kp F8        &kp F9         &kp F10        &kp F11            &kp F12
-&trans  &kp RA(Q)         &kp RA(Q)       &kp RA(E)       &kp RA(N5)  &kp TILDE                    &kp RA(N7)  &kp GRAVE     &kp INSERT     &kp N9         &kp MINUS          &kp F12
-&trans  &kp RA(NUMBER_1)  &kp RA(DOLLAR)  &kp RA(D)       &kp RA(F)   &kp RA(G)                    &kp CARET   &kp NUMBER_4  &kp N5         &kp RA(L)      &kp RA(SEMICOLON)  &kp RIGHT_SHIFT
-&trans  &kp PERCENT       &kp RA(X)       &kp LEFT_BRACE  &kp RA(V)   &kp LA(B)  &trans    &trans  &kp RA(N)   &kp NUMBER_1  &kp PAGE_UP    &kp RA(COMMA)  &kp RA(PERIOD)     &kp SLASH
-                          &trans          &trans          &trans      &trans     &trans    &trans  &trans      &kp HOME      &kp PAGE_DOWN  &kp END
+&kp F1  &kp F2            &kp F3            &kp F4          &kp F5      &kp F6                       &kp F7      &kp F8        &kp F9         &kp F10        &kp F11            &kp F12
+&trans  &kp RA(Q)         &kp RA(W)         &kp RA(E)       &kp RA(N5)  &kp TILDE                    &kp RA(N7)  &kp GRAVE     &kp INSERT     &kp N9         &kp MINUS          &kp F12
+&trans  &kp RA(NUMBER_1)  &kp RA(NUMBER_3)  &kp RA(D)       &kp RA(F)   &kp RA(G)                    &kp CARET   &kp NUMBER_4  &kp N5         &kp RA(L)      &kp RA(SEMICOLON)  &kp RIGHT_SHIFT
+&trans  &kp PERCENT       &kp RA(X)         &kp LEFT_BRACE  &kp RA(V)   &kp LA(B)  &trans    &trans  &kp RA(N)   &kp NUMBER_1  &kp PAGE_UP    &kp RA(COMMA)  &kp RA(PERIOD)     &kp SLASH
+                          &trans            &trans          &trans      &trans     &trans    &trans  &trans      &kp HOME      &kp PAGE_DOWN  &kp END
             >;
 
             sensor-bindings =
