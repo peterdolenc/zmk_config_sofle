@@ -17,6 +17,31 @@
             bindings = <&kp ESC>;
             key-positions = <0 12>;
         };
+
+        Lock {
+            bindings = <&kp LG(LC(Q))>;
+            key-positions = <0 11>;
+        };
+
+        sleep {
+            bindings = <&kp K_POWER>;
+            key-positions = <49 36>;
+        };
+
+        win-print-screen {
+            bindings = <&kp LS(LC(X))>;
+            key-positions = <11 23>;
+        };
+
+        caps-word {
+            bindings = <&caps_word>;
+            key-positions = <12 24>;
+        };
+
+        email {
+            bindings = <&email>;
+            key-positions = <2 3 4>;
+        };
     };
 
     behaviors {
@@ -39,6 +64,25 @@
             hold-trigger-key-positions = <53 56>;
             tapping-term-ms = <200>;
         };
+
+        sticky: sticky {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <1000>;
+            ignore-modifiers;
+            quick-release;
+        };
+    };
+
+    macros {
+        email: email {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp M &kp A &kp I &kp L &kp RA(V) &kp P &kp E &kp T &kp E &kp R &kp D &kp O &kp L &kp E &kp N &kp C &kp DOT &kp S &kp I>;
+            label = "EMAIL";
+        };
     };
 
     keymap {
@@ -55,11 +99,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp NUMBER_1    &kp N2  &kp N3    &kp N4         &kp N5    &kp N6                                                &kp N7                       &kp N8          &kp N9    &kp N0     &kp SINGLE_QUOTE  &kp PLUS
-&kp TAB         &kp Q   &kp W     &kp E          &kp R     &kp T                                                 &kp Z                        &kp U           &kp I     &kp O      &kp P             &kp S
-&kp LEFT_SHIFT  &kp A   &kp S     &kp D          &kp F     &kp G                                                 &kp H                        &kp J           &kp K     &kp L      &kp SEMI          &hold_tap_keys RIGHT_SHIFT Z
-&kp LCTRL       &kp Z   &kp X     &kp C          &kp V     &kp B                    &kp C_MUTE    &kp CAPSLOCK   &kp N                        &kp M           &kp UP    &kp COMMA  &kp PERIOD        &kp MINUS
-                        &kp LGUI  &kp LESS_THAN  &kp LALT  &hold_tap_layer 1 SPACE  &kp RET       &kp BACKSPACE  &hold_tap_layer 1 BACKSPACE  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT
+&kp NUMBER_1        &kp N2  &kp N3    &kp N4         &kp N5    &kp N6                                                &kp N7                       &kp N8          &kp N9    &kp N0     &kp MINUS   &kp EQUAL
+&kp TAB             &kp Q   &kp W     &kp E          &kp R     &kp T                                                 &kp Y                        &kp U           &kp I     &kp O      &kp P       &kp LEFT_BRACKET
+&sticky LEFT_SHIFT  &kp A   &kp S     &kp D          &kp F     &kp G                                                 &kp H                        &kp J           &kp K     &kp L      &kp SEMI    &hold_tap_keys RIGHT_SHIFT SINGLE_QUOTE
+&kp LCTRL           &kp Z   &kp X     &kp C          &kp V     &kp B                    &kp C_MUTE    &kp CAPSLOCK   &kp N                        &kp M           &kp UP    &kp COMMA  &kp PERIOD  &kp SLASH
+                            &kp LGUI  &kp LESS_THAN  &kp LALT  &hold_tap_layer 1 SPACE  &kp RET       &kp BACKSPACE  &hold_tap_layer 1 BACKSPACE  &kp LEFT_ARROW  &kp DOWN  &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -77,11 +121,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp F1  &kp F2         &kp F3      &kp F4                &kp F5            &kp F6                            &kp F7           &kp F8        &kp F9         &kp F10        &kp F11           &kp F12
-&trans  &kp BACKSLASH  &kp PIPE    &kp LEFT_BRACKET      &kp CARET         &kp TILDE                         &kp GRAVE        &kp GRAVE     &kp INSERT     &kp N9         &kp MINUS         &kp F12
-&trans  &kp HASH       &kp DOLLAR  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp RBKT                          &kp CARET        &kp NUMBER_4  &kp N5         &kp NUMBER_6   &kp PLUS          &kp PIPE
-&trans  &kp PERCENT    &kp CARET   &kp LEFT_BRACE        &kp AT_SIGN       &kp LEFT_BRACE  &trans    &trans  &kp RIGHT_BRACE  &kp NUMBER_1  &kp PAGE_UP    &kp LESS_THAN  &kp GREATER_THAN  &kp SLASH
-                       &trans      &trans                &trans            &trans          &trans    &trans  &trans           &kp HOME      &kp PAGE_DOWN  &kp END
+&kp F1  &kp F2            &kp F3          &kp F4          &kp F5      &kp F6                       &kp F7      &kp F8        &kp F9         &kp F10        &kp F11            &kp F12
+&trans  &kp RA(Q)         &kp RA(Q)       &kp RA(E)       &kp RA(N5)  &kp TILDE                    &kp RA(N7)  &kp GRAVE     &kp INSERT     &kp N9         &kp MINUS          &kp F12
+&trans  &kp RA(NUMBER_1)  &kp RA(DOLLAR)  &kp RA(D)       &kp RA(F)   &kp RA(G)                    &kp CARET   &kp NUMBER_4  &kp N5         &kp RA(L)      &kp RA(SEMICOLON)  &kp RIGHT_SHIFT
+&trans  &kp PERCENT       &kp RA(X)       &kp LEFT_BRACE  &kp RA(V)   &kp LA(B)  &trans    &trans  &kp RA(N)   &kp NUMBER_1  &kp PAGE_UP    &kp RA(COMMA)  &kp RA(PERIOD)     &kp SLASH
+                          &trans          &trans          &trans      &trans     &trans    &trans  &trans      &kp HOME      &kp PAGE_DOWN  &kp END
             >;
 
             sensor-bindings =
