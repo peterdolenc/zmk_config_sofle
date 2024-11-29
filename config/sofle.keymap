@@ -52,6 +52,11 @@
             bindings = <&kp CAPSLOCK>;
             key-positions = <35 24>;
         };
+
+        mac-print-screen {
+            bindings = <&kp LS(LG(NUMBER_4))>;
+            key-positions = <22 10>;
+        };
     };
 
     behaviors {
