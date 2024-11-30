@@ -79,6 +79,7 @@
             #binding-cells = <2>;
             hold-trigger-key-positions = <53 56>;
             tapping-term-ms = <200>;
+            hold-while-undecided;
         };
 
         sticky: sticky {
