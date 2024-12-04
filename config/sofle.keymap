@@ -180,8 +180,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans     &trans    &trans    &trans     &trans      &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INSERT  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans    &trans    &trans     &trans      &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans    &trans    &trans     &trans      &kp RIGHT
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans     &kp LEFT  &kp UP    &kp DOWN
             >;
         };
     };
