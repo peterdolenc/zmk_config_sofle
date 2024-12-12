@@ -14,11 +14,6 @@
     combos {
         compatible = "zmk,combos";
 
-        ESCP {
-            bindings = <&kp ESC>;
-            key-positions = <0 12>;
-        };
-
         Lock {
             bindings = <&kp LG(LC(Q))>;
             key-positions = <0 11>;
@@ -36,7 +31,7 @@
 
         caps-word {
             bindings = <&caps_word>;
-            key-positions = <12 24>;
+            key-positions = <24 35>;
         };
 
         email {
@@ -44,14 +39,9 @@
             key-positions = <2 3 4>;
         };
 
-        caps {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <35 24>;
-        };
-
         mac-print-screen {
             bindings = <&kp LS(LG(NUMBER_4))>;
-            key-positions = <22 10>;
+            key-positions = <0 12>;
         };
 
         esc2 {
