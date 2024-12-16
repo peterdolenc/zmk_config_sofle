@@ -54,6 +54,16 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <10 11>;
         };
+
+        del1 {
+            bindings = <&kp DELETE>;
+            key-positions = <24 10 11>;
+        };
+
+        del2 {
+            bindings = <&kp DELETE>;
+            key-positions = <36 10 11>;
+        };
     };
 
     behaviors {
