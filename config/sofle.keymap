@@ -180,7 +180,7 @@
         navigation {
             bindings = <
 &bt BT_CLR  &bt BT_DISC 0  &trans     &trans     &trans     &trans                    &trans     &trans          &mkp MCLK       &trans           &trans      &trans
-&trans      &trans         &trans     &trans     &trans     &trans                    &kp PG_UP  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp INSERT  &trans
+&bt BT_NXT  &bt BT_PRV     &trans     &trans     &trans     &trans                    &kp PG_UP  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp INSERT  &trans
 &trans      &trans         &trans     &trans     &trans     &trans                    &kp PG_DN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans      &trans
 &trans      &trans         &trans     &mkp MCLK  &trans     &trans  &trans    &trans  &trans     &trans          &trans          &trans           &trans      &kp RIGHT
                            &mkp LCLK  &trans     &mkp RCLK  &trans  &trans    &trans  &trans     &kp LEFT        &kp UP          &kp DOWN
