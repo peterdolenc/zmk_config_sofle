@@ -107,6 +107,20 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_LCTL|MOD_LALT|MOD_RSFT)>;
         };
+
+        scroll_vertical: scroll_vertical {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL_VERTICAL";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
+
+        scrol_horizontal: scrol_horizontal {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROL_HORIZONTAL";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+        };
     };
 
     macros {
@@ -141,7 +155,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+                <&scroll_vertical>;
         };
 
         alt_gr_fn_layer {
@@ -176,6 +190,8 @@
 &trans      &trans         &trans     &mkp MCLK  &trans     &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &mmv MOVE_DOWN  &msc SCRL_RIGHT  &msc SCRL_DOWN  &mmv MOVE_RIGHT
                            &mkp LCLK  &trans     &mkp RCLK  &trans  &trans    &trans  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP
             >;
+
+            sensor-bindings = <&scroll_vertical>, <&scrol_horizontal>;
         };
     };
 };
