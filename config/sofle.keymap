@@ -118,13 +118,6 @@
             tapping-term-ms = <180>;
             hold-while-undecided;
         };
-
-        scroll: scroll {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "SCROLL";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
-        };
     };
 
     macros {
@@ -157,9 +150,7 @@
                             &kp LGUI  &kp LALT  &hld_tap_layer_prio 2 LG(LS(M))  &hold_tap_layer 1 KP_ENTER  &kp SPACE     &backspace_del  &hold_tap_layer 1 RIGHT_ALT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&scroll SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         alt_gr_fn_layer {
@@ -188,14 +179,14 @@
 
         mouse {
             bindings = <
-&bt BT_CLR  &bt BT_DISC 0  &trans            &trans            &trans           &trans                    &trans          &trans          &mkp MCLK       &trans           &trans          &trans
-&bt BT_NXT  &bt BT_PRV     &trans            &mmv MOVE_RIGHT   &trans           &trans                    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp INSERT      &trans
-&trans      &mkp RCLK      &mmv MOVE_RIGHT   &mkp LCLK         &mmv MOVE_RIGHT  &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP    &trans
-&trans      &trans         &mkp RCLK         &mmv MOVE_RIGHT   &mkp LCLK        &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &mmv MOVE_DOWN  &msc SCRL_RIGHT  &msc SCRL_DOWN  &mmv MOVE_RIGHT
-                           &trans            &trans            &trans           &trans  &trans    &trans  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP
+&bt BT_CLR  &bt BT_DISC 0  &trans           &trans           &trans           &trans                    &trans          &trans          &mkp MCLK       &trans           &trans          &trans
+&bt BT_NXT  &bt BT_PRV     &trans           &mmv MOVE_RIGHT  &trans           &trans                    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp INSERT      &trans
+&trans      &mkp RCLK      &mmv MOVE_RIGHT  &mkp LCLK        &mmv MOVE_RIGHT  &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP    &trans
+&trans      &trans         &mkp RCLK        &mmv MOVE_RIGHT  &mkp LCLK        &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &mmv MOVE_DOWN  &msc SCRL_RIGHT  &msc SCRL_DOWN  &mmv MOVE_RIGHT
+                           &trans           &trans           &trans           &trans  &trans    &trans  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP
             >;
 
-            sensor-bindings = <&none>, <&scroll SCRL_LEFT SCRL_RIGHT>;
+            sensor-bindings = <&none>;
         };
     };
 };
