@@ -112,14 +112,14 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "SCROLL_VERTICAL";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&msc MOVE_Y 10>, <&msc MOVE_Y -10>;
         };
 
         scrol_horizontal: scrol_horizontal {
             compatible = "zmk,behavior-sensor-rotate";
             label = "SCROL_HORIZONTAL";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+            bindings = <&msc MOVE_X -10>, <&msc MOVE_X 10>;
         };
     };
 
@@ -146,11 +146,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp NUMBER_1        &kp N2  &kp N3    &kp N4                       &kp N5    &kp N6                                                    &kp N7                       &kp N8          &kp N9          &kp N0        &kp MINUS               &kp EQUAL
-&kp TAB             &kp Q   &kp W     &kp E                        &kp R     &kp T                                                     &kp Y                        &kp U           &kp I           &kp O         &kp P                   &kp LEFT_BRACKET
-&sticky LEFT_SHIFT  &kp A   &kp S     &kp D                        &kp F     &kp G                                                     &kp H                        &kp J           &kp K           &kp L         &hold_tap_layer 2 SEMI  &hold_tap_keys RIGHT_SHIFT NON_US_HASH
-&kp LCTRL           &kp Z   &kp X     &kp C                        &kp V     &kp B                       &kp C_MUTE    &kp CAPSLOCK    &kp N                        &kp M           &kp COMMA       &kp DOT       &kp SLASH               &kp RIGHT
-                            &kp LGUI  &hold_tap_layer 2 LG(LS(M))  &kp LALT  &hold_tap_layer 1 KP_ENTER  &kp SPACE     &backspace_del  &hold_tap_layer 1 RIGHT_ALT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW
+&kp NUMBER_1        &kp N2  &kp N3    &kp N4    &kp N5                       &kp N6                                                    &kp N7                       &kp N8          &kp N9          &kp N0        &kp MINUS               &kp EQUAL
+&kp TAB             &kp Q   &kp W     &kp E     &kp R                        &kp T                                                     &kp Y                        &kp U           &kp I           &kp O         &kp P                   &kp LEFT_BRACKET
+&sticky LEFT_SHIFT  &kp A   &kp S     &kp D     &kp F                        &kp G                                                     &kp H                        &kp J           &kp K           &kp L         &hold_tap_layer 2 SEMI  &hold_tap_keys RIGHT_SHIFT NON_US_HASH
+&kp LCTRL           &kp Z   &kp X     &kp C     &kp V                        &kp B                       &kp C_MUTE    &kp CAPSLOCK    &kp N                        &kp M           &kp COMMA       &kp DOT       &kp SLASH               &kp RIGHT
+                            &kp LGUI  &kp LALT  &hold_tap_layer 2 LG(LS(M))  &hold_tap_layer 1 KP_ENTER  &kp SPACE     &backspace_del  &hold_tap_layer 1 RIGHT_ALT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW
             >;
 
             sensor-bindings =
@@ -186,9 +186,9 @@
             bindings = <
 &bt BT_CLR  &bt BT_DISC 0  &trans     &trans     &trans     &trans                    &trans          &trans          &mkp MCLK       &trans           &trans          &trans
 &bt BT_NXT  &bt BT_PRV     &trans     &trans     &trans     &trans                    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp INSERT      &trans
-&trans      &trans         &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP    &trans
-&trans      &trans         &trans     &mkp MCLK  &trans     &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &mmv MOVE_DOWN  &msc SCRL_RIGHT  &msc SCRL_DOWN  &mmv MOVE_RIGHT
-                           &mkp LCLK  &trans     &mkp RCLK  &trans  &trans    &trans  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP
+&trans      &trans         &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP    &trans
+&trans      &trans         &trans     &trans     &trans     &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &mmv MOVE_DOWN  &msc SCRL_RIGHT  &msc SCRL_DOWN  &mmv MOVE_RIGHT
+                           &trans     &trans     &trans     &trans  &trans    &trans  &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP
             >;
 
             sensor-bindings = <&scroll_vertical>, <&scrol_horizontal>;
