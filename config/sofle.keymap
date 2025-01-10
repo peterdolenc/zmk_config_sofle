@@ -127,13 +127,6 @@
             hold-while-undecided;
         };
 
-        retro_tap_layer: retro_tap_layer {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&mo>, <&kp>;
-            retro-tap;
-        };
-
        scroll: scroll {
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "SCROLL";
