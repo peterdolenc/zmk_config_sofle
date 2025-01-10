@@ -203,9 +203,9 @@
         mouse {
             bindings = <
 &bt BT_CLR  &bt BT_DISC 0  &trans              &trans              &trans             &trans                    &trans          &trans          &mkp MCLK       &trans           &trans          &trans
-&bt BT_NXT  &bt BT_PRV     &trans              &mmv MOVE_Y(-1200)   &trans             &trans                    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp INSERT      &trans
-&trans      &mkp RCLK      &mmv MOVE_X(-1200)  &mkp LCLK           &mmv MOVE_X(1200)  &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK    &trans
-&trans      &trans         &mkp RCLK           &mmv MOVE_Y(1200)  &mkp LCLK          &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &mmv MOVE_DOWN  &msc SCRL_RIGHT  &msc SCRL_DOWN  &mmv MOVE_RIGHT
+&bt BT_NXT  &bt BT_PRV     &trans              &mmv MOVE_Y(-1100)   &trans             &trans                    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp INSERT      &trans
+&trans      &mkp RCLK      &mmv MOVE_X(-1100)  &mmv MOVE_Y(1100)           &mmv MOVE_X(100)  &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK    &trans
+&trans      &trans         &mkp RCLK           &mmv MOVE_Y(1100)  &mkp LCLK          &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &mmv MOVE_DOWN  &msc SCRL_RIGHT  &msc SCRL_DOWN  &mmv MOVE_RIGHT
                            &trans              &trans              &trans             &trans  &trans    &trans  &mkp LCLK         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP
             >;
 
