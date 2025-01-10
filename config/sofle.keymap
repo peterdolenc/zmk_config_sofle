@@ -131,7 +131,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&mo>, <&kp>;
-            retro_tap;
+            retro-tap;
         };
 
        scroll: scroll {
