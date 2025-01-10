@@ -121,11 +121,17 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_LAYER_IMMEDIATE";
             bindings = <&mo>, <&kp>;
-
+            flavor = "tap-preferred";
             #binding-cells = <2>;
-            hold-trigger-key-positions = <52 53 56>;
             tapping-term-ms = <180>;
             hold-while-undecided;
+        };
+
+        retro_tap_layer: retro_tap_layer {
+            compatible = "zmk,behavior-hold-tap";
+
+            bindings = <&mo>, <&kp>;
+            retro_tap;
         };
 
        scroll: scroll {
