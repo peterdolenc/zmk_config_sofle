@@ -88,12 +88,11 @@
     behaviors {
         hold_tap_keys: hold_tap_keys {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_KEYS";
             bindings = <&kp>, <&kp>;
-
+           flavor = "hold-preferred";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <35>;
+            tapping-term-ms = <180>;
+            hold-while-undecided;
         };
 
         sticky: sticky {
@@ -132,7 +131,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_LAYER_IMMEDIATE";
             bindings = <&mo>, <&kp>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             hold-while-undecided;
@@ -173,7 +172,7 @@
 &kp TAB             &kp Q   &kp W     &kp E     &kp R                                  &kp T                                          &kp Y                        &kp U           &kp I           &kp O         &kp P                   &kp LEFT_BRACKET
 &sticky LEFT_SHIFT  &kp A   &kp S     &kp D     &kp F                                  &kp G                                          &kp H                        &kp J           &kp K           &kp L         &kp SEMI                &hold_tap_keys RIGHT_SHIFT NON_US_HASH
 &kp LCTRL           &kp Z   &kp X     &kp C     &kp V                                  &kp B               &kp C_MUTE  &kp CAPSLOCK   &kp N                        &kp M           &kp COMMA       &kp DOT       &kp SLASH               &kp RIGHT
-                            &kp LGUI  &kp RALT  &hold_tap_layer_immediate 3 KP_ENTER    &hold_tap_layer_immediate 3 KP_ENTER     &kp SPACE   &backspace_del  &mo 2                       &mo 1        &kp LEFT_ARROW      &kp LG(LS(M))   
+                            &kp LGUI  &kp LALT   &mo 1     &hold_tap_layer_immediate 3 KP_ENTER     &hold_tap_keys LEFT_SHIFT SPACE   &backspace_del     &mo 2         &mo 1        &kp LEFT_ARROW      &kp LG(LS(M))   
             >;
 
             sensor-bindings =
@@ -193,11 +192,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp F1  &kp F2            &kp F3            &kp F4          &kp F5      &kp F6                       &kp F7      &kp F8        &kp F9      &kp F10        &kp F11            &kp F12
-&trans  &kp RA(Q)         &kp RA(W)         &kp RA(E)       &kp RA(N5)  &kp TILDE                    &kp RA(N7)  &kp GRAVE     &kp UP      &kp N9         &kp INSERT         &kp F12
-&trans  &kp RA(NUMBER_1)  &kp RA(NUMBER_3)  &kp RA(D)       &kp RA(F)   &kp RA(G)                    &kp CARET   &kp LEFT      &kp DOWN    &kp RIGHT      &kp RA(SEMICOLON)  &kp RIGHT_SHIFT
-&trans  &kp PERCENT       &kp RA(X)         &kp LEFT_BRACE  &kp RA(V)   &kp RA(B)  &trans    &trans  &kp RA(N)   &kp NUMBER_1  &kp INSERT  &kp RA(COMMA)  &kp RA(PERIOD)     &kp END
-                          &trans            &trans          &trans      &trans     &trans    &trans  &trans      &kp HOME      &kp PG_UP   &kp PG_DN
+&kp F1  &kp F2            &kp F3            &kp F4          &kp F5      &kp F6                           &kp F7      &kp F8        &kp F9         &kp F10        &kp F11            &kp F12
+&trans  &kp RA(Q)         &kp RA(W)         &kp RA(E)       &kp LS(N5)  &kp LS(N6)                       &kp RA(N7)  &kp RA(COMMA) &kp RA(PERIOD) &kp LS(N1)     &kp LS(MINUS)      &kp LS(EQUAL)
+&trans  &kp LS(N2)        &kp LS(N3)        &kp LS(N4)      &kp RA(F)   &kp RA(G)                        &kp LS(N7)  &kp LS(N8)    &kp LS(N9)     &kp LS(N0)     &kp MINUS          &kp EQUAL
+&trans  &kp RA(NUMBER_1)  &kp RA(NUMBER_3)  &kp LEFT_BRACE  &kp RA(V)   &kp RA(B)  &trans    &trans      &kp RA(N)   &kp RA(N5)    &kp INSERT     &kp RA(COMMA)  &kp RA(PERIOD)     &kp END 
+                          &trans            &trans          &trans      &trans     &trans    &kp DELETE  &trans      &trans        &kp HOME       &kp RA(SEMICOLON)
             >;
 
             sensor-bindings =
