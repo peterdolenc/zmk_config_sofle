@@ -210,10 +210,10 @@
 
             bindings = <
 &trans  &trans            &trans            &trans          &trans      &trans                       &trans      &trans        &trans      &trans         &trans             &trans
-&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &kp HOME        &kp UP      &kp END         &trans             &trans
-&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &kp LEFT      &kp DOWN    &kp RIGHT         &trans             &trans
-&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &trans         &kp INSERT      &trans         &trans            &kp PG_DN
-                          &trans            &trans          &trans      &trans     &trans    &trans  &trans      &trans      &trans         &kp PG_UP
+&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &kp HOME        &kp UP      &kp END         &kp PG_UP             &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &kp LEFT      &kp DOWN    &kp RIGHT         &kp PG_DN             &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &trans         &kp INSERT      &trans         &trans            &trans
+                          &trans            &trans          &trans      &trans     &trans    &trans  &trans      &trans      &trans         &trans
             >;
 
             sensor-bindings =
