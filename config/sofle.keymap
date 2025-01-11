@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
- * SPDX-License-Identifier: MIT LG(LS(M))
+ * SPDX-License-Identifier: MIT 
  */
 
 #include <dt-bindings/zmk/mouse.h>
@@ -22,7 +22,18 @@
             bindings = <&kp LG(LC(Q))>;
             key-positions = <0 11>;
         };
-
+       bt_clear {
+            bindings = <&bt BT_CLR>;
+            key-positions = <0 1 10 11>;
+        };
+        bt_next {
+            bindings = <&bt BT_NXT>;
+            key-positions = <0 1 10>;
+        };
+        bt_prev {
+            bindings = <&bt BT_PRV>;
+            key-positions = <0 1 12>;
+        };
         sleep {
             bindings = <&kp K_POWER>;
             key-positions = <49 36>;
@@ -158,11 +169,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp NUMBER_1        &kp N2  &kp N3    &kp N4    &kp N5                                 &kp N6                                                                &kp N7                       &kp N8          &kp N9          &kp N0        &kp MINUS               &kp EQUAL
-&kp TAB             &kp Q   &kp W     &kp E     &kp R                                  &kp T                                                                 &kp Y                        &kp U           &kp I           &kp O         &kp P                   &kp LEFT_BRACKET
-&sticky LEFT_SHIFT  &kp A   &kp S     &kp D     &kp F                                  &kp G                                                                 &kp H                        &kp J           &kp K           &kp L         &kp SEMI                &hold_tap_keys RIGHT_SHIFT NON_US_HASH
-&kp LCTRL           &kp Z   &kp X     &kp C     &kp V                                  &kp B                       &kp C_MUTE    &kp CAPSLOCK                &kp N                        &kp M           &kp COMMA       &kp DOT       &kp SLASH               &kp RIGHT
-                            &kp LGUI  &kp RALT  &hold_tap_layer_immediate 1 KP_ENTER    &hold_tap_layer_immediate 2 KP_ENTER     &kp SPACE   &backspace_del  &mo 1                        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW
+&kp NUMBER_1        &kp N2  &kp N3    &kp N4    &kp N5                                 &kp N6                                         &kp N7                       &kp N8          &kp N9          &kp N0        &kp MINUS               &kp EQUAL
+&kp TAB             &kp Q   &kp W     &kp E     &kp R                                  &kp T                                          &kp Y                        &kp U           &kp I           &kp O         &kp P                   &kp LEFT_BRACKET
+&sticky LEFT_SHIFT  &kp A   &kp S     &kp D     &kp F                                  &kp G                                          &kp H                        &kp J           &kp K           &kp L         &kp SEMI                &hold_tap_keys RIGHT_SHIFT NON_US_HASH
+&kp LCTRL           &kp Z   &kp X     &kp C     &kp V                                  &kp B               &kp C_MUTE  &kp CAPSLOCK   &kp N                        &kp M           &kp COMMA       &kp DOT       &kp SLASH               &kp RIGHT
+                            &kp LGUI  &kp RALT  &kp LEFT_SHIFT    &hold_tap_layer_immediate 3 KP_ENTER     &kp SPACE   &backspace_del  &mo 2                       &mo 1           &kp LG(LS(M))       &kp LEFT_ARROW  
             >;
 
             sensor-bindings =
@@ -194,12 +205,28 @@
                 <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
+        navi {
+            display-name = "navi";
+
+            bindings = <
+&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &trans        &trans      &trans         &trans             &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &kp HOME        &kp UP      &kp END         &trans             &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &kp LEFT      &kp DOWN    &kp RIGHT         &trans             &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &trans         &kp INSERT      &trans         &trans            &kp PG_DN
+                          &trans            &trans          &trans      &trans     &trans    &trans  &trans      &trans      &trans         &kp PG_UP
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
+        };
+
         mouse {
             bindings = <
   &kp F1  &kp F2            &kp F3            &kp F4          &kp F5      &kp F6                       &kp F7      &kp F8        &kp F9      &kp F10        &kp F11            &kp F12
-&bt BT_CLR      &trans      &trans              &mmv MOVE_Y(-1100)   &trans             &trans                    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp INSERT      &trans
- &bt BT_PRV      &mkp RCLK      &mmv MOVE_X(-1100)  &mmv MOVE_Y(1100)   &mmv MOVE_X(1100)  &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK    &trans
-&bt BT_NXT      &trans         &mkp RCLK           &mmv MOVE_Y(1100)  &mkp LCLK          &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &mmv MOVE_DOWN  &msc SCRL_RIGHT  &msc SCRL_DOWN  &mmv MOVE_RIGHT
+&trans      &trans      &trans              &mmv MOVE_Y(-1100)   &trans             &trans                    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp INSERT      &trans
+ &trans      &mkp RCLK      &mmv MOVE_X(-1100)  &mmv MOVE_Y(1100)   &mmv MOVE_X(1100)  &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK    &trans
+&trans      &trans         &mkp RCLK           &mmv MOVE_Y(1100)  &mkp LCLK          &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &mmv MOVE_DOWN  &msc SCRL_RIGHT  &msc SCRL_DOWN  &mmv MOVE_RIGHT
                            &trans              &trans              &trans             &trans  &trans    &trans  &mkp LCLK         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP
             >;
 
