@@ -142,7 +142,7 @@
             label = "SCROLL";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            tap-ms = <80>;     
+            tap-ms = <200>;     
         };
     };
 
@@ -201,22 +201,23 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LEFT RIGHT>,
+                <&inc_dec_kp  RIGHT LEh
+FT>,
                 <&inc_dec_kp PG_UP  PG_DN>;
         };
 
         mouse {
             bindings = <
 &kp F1   &kp F2      &kp F3          &kp F4             &kp F5           &kp F6                    &kp F7           &kp F8             &kp F9              &kp F10            &kp F11          &kp F12
-&trans   &trans      &trans          &mmv MOVE_UP       &trans           &trans                    &msc MOVE_Y(20)  &mkp LCLK          &mmv MOVE_Y(-1100)  &mkp RCLK          &kp INSERT       &trans
-&trans   &mkp RCLK   &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_RIGHT  &trans                    &msc MOVE_Y(-20) &mmv MOVE_X(-1100) &mmv MOVE_Y(1100)   &mmv MOVE_X(1100)  &mkp RCLK        &trans
-&trans   &mkp MCLK   &mkp RCLK       &mmv MOVE_Y(1100)  &mkp LCLK        &trans  &trans  &trans    &trans           &msc MOVE_X(-20)   &mmv MOVE_DOWN      &msc MOVE_X(20)    &msc MOVE_Y(20)  &msc MOVE_X(20)
+&trans   &trans      &trans          &mmv MOVE_UP       &trans           &trans                    &msc MOVE_Y(15)  &mkp LCLK          &mmv MOVE_Y(-1100)  &mkp RCLK          &kp INSERT       &trans
+&trans   &mkp RCLK   &mmv MOVE_LEFT  &mmv MOVE_DOWN     &mmv MOVE_RIGHT  &trans                    &msc MOVE_Y(-15) &mmv MOVE_X(-1100) &mmv MOVE_Y(1100)   &mmv MOVE_X(1100)  &mkp RCLK        &trans
+&trans   &mkp MCLK   &mkp RCLK       &mmv MOVE_Y(1100)  &mkp LCLK        &trans  &trans  &trans    &trans           &msc MOVE_X(-15)   &mmv MOVE_DOWN      &msc MOVE_X(15)    &msc MOVE_Y(20)  &msc MOVE_X(20)
                      &trans          &trans             &trans           &trans  &trans  &mkp RCLK &mkp LCLK        &mkp MCLK          &msc MOVE_X(-20)    &msc MOVE_Y(-20)
             >;
 
             sensor-bindings =
-                <&scroll MOVE_X(20) MOVE_X(-20)>,
-                <&scroll MOVE_Y(20)  MOVE_Y(-20)>;
+                <&scroll MOVE_X(15) MOVE_X(-15)>,
+                <&scroll MOVE_Y(15)  MOVE_Y(-15)>;
         };
     };
 };
