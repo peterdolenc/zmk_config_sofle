@@ -142,7 +142,7 @@
             label = "SCROLL";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-            tap-ms = <20>;     
+            tap-ms = <80>;     
         };
     };
 
