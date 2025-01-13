@@ -91,7 +91,16 @@
             bindings = <&kp>, <&kp>;
            flavor = "hold-preferred";
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+        };
+
+        hold_tap_balanced: hold_tap_balanced {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&kp>;
+           flavor = "balanced";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
             hold-while-undecided;
         };
 
@@ -172,7 +181,7 @@
 &kp TAB             &kp Q   &kp W     &kp E     &kp R                                  &kp T                                          &kp Y                        &kp U           &kp I           &kp O         &kp P                   &kp LEFT_BRACKET
 &sticky LEFT_SHIFT  &kp A   &kp S     &kp D     &kp F                                  &kp G                                          &kp H                        &kp J           &kp K           &kp L         &kp SEMI                &hold_tap_keys RIGHT_SHIFT NON_US_HASH
 &kp LCTRL           &kp Z   &kp X     &kp C     &kp V                                  &kp B               &kp C_MUTE  &kp CAPSLOCK   &kp N                        &kp M           &kp COMMA       &kp DOT       &kp SLASH               &kp RIGHT
-                            &kp LGUI  &kp LALT   &mo 1     &hold_tap_layer_immediate 3 KP_ENTER     &hold_tap_keys LEFT_SHIFT SPACE   &backspace_del     &mo 2         &mo 1        &kp LEFT_ARROW      &kp LG(LS(M))   
+                            &kp LGUI  &kp LALT   &mo 1     &hold_tap_layer_immediate 3 KP_ENTER     &hold_tap_balanced LEFT_SHIFT SPACE   &backspace_del     &mo 2         &mo 1        &kp LEFT_ARROW      &kp LG(LS(M))   
             >;
 
             sensor-bindings =
