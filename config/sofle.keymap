@@ -201,8 +201,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp  RIGHT LEh
-FT>,
+                <&inc_dec_kp  RIGHT LEFT>,
                 <&inc_dec_kp PG_UP  PG_DN>;
         };
 
