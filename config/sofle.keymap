@@ -223,10 +223,10 @@
         mouse {
             bindings = <
   &kp F1  &kp F2            &kp F3            &kp F4          &kp F5      &kp F6                       &kp F7      &kp F8        &kp F9      &kp F10        &kp F11            &kp F12
-&trans      &trans      &trans              &mmv MOVE_Y(-1100)   &trans             &trans                    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &kp INSERT      &trans
- &trans      &mkp RCLK      &mmv MOVE_X(-1100)  &mmv MOVE_Y(1100)   &mmv MOVE_X(1100)  &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK    &trans
-&trans      &trans         &mkp RCLK           &mmv MOVE_Y(1100)  &mkp LCLK          &trans  &trans    &trans  &trans          &msc SCRL_LEFT  &mmv MOVE_DOWN  &msc SCRL_RIGHT  &msc SCRL_DOWN  &mmv MOVE_RIGHT
-                           &trans              &trans              &trans             &trans  &trans    &trans  &mkp LCLK         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP
+&trans      &trans      &trans              &mmv MOVE_UP   &trans             &trans                    &msc MOVE_Y(-1100)    &mkp LCLK       &mmv MOVE_Y(-1100)    &mkp RCLK        &kp INSERT      &trans
+ &trans      &mkp RCLK      &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans                    &msc MOVE_Y(1100)  &mmv MOVE_X(-1100)  &mmv MOVE_Y(1100)  &mmv MOVE_X(1100)  &mkp RCLK    &trans
+&trans      &mkp MCLK         &mkp RCLK           &mmv MOVE_Y(1100)  &mkp LCLK          &trans  &trans    &trans  &trans          &msc MOVE_X(-1100)  &mmv MOVE_DOWN   &msc MOVE_X(1100)  &msc MOVE_Y(-500)  &msc MOVE_X(500)
+                           &trans              &trans              &trans             &trans  &trans    &mkp RCLK &mkp LCLK         &mkp MCLK  &msc MOVE_X(-500)  &msc MOVE_Y(500)
             >;
 
             sensor-bindings =
