@@ -24,18 +24,18 @@
         };
        bt_clear {
             bindings = <&bt BT_CLR>;
-            key-positions = <0 1 10 11>;
+            key-positions = <12 13 21>;
         };
         bt_next {
             bindings = <&bt BT_NXT>;
-            key-positions = <0 1 10>;
+            key-positions = <12 13 23>;
         };
         bt_prev {
             bindings = <&bt BT_PRV>;
-            key-positions = <0 1 12>;
+            key-positions = <12 13 22>;
         };
         sleep {
-            bindings = <&kp K_POWER>;
+            bindings = <&kp LS(LA(S))>;
             key-positions = <49 36>;
         };
 
@@ -71,18 +71,9 @@
 
         del1 {
             bindings = <&kp DELETE>;
-            key-positions = <24 10 11>;
+            key-positions = <21 10>;
         };
 
-        del2 {
-            bindings = <&kp DELETE>;
-            key-positions = <36 10 11>;
-        }; 
-
-        del3 {
-            bindings = <&kp DELETE>;
-            key-positions = <21 10 11>;
-        };
     };
 
     behaviors {
