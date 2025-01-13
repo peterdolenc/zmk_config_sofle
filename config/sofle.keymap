@@ -223,15 +223,15 @@
         mouse {
             bindings = <
   &kp F1  &kp F2            &kp F3            &kp F4          &kp F5      &kp F6                       &kp F7      &kp F8        &kp F9      &kp F10        &kp F11            &kp F12
-&trans      &trans      &trans              &mmv MOVE_UP   &trans             &trans                    &msc MOVE_Y(-1100)    &mkp LCLK       &mmv MOVE_Y(-1100)    &mkp RCLK        &kp INSERT      &trans
- &trans      &mkp RCLK      &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans                    &msc MOVE_Y(1100)  &mmv MOVE_X(-1100)  &mmv MOVE_Y(1100)  &mmv MOVE_X(1100)  &mkp RCLK    &trans
-&trans      &mkp MCLK         &mkp RCLK           &mmv MOVE_Y(1100)  &mkp LCLK          &trans  &trans    &trans  &trans          &msc MOVE_X(-1100)  &mmv MOVE_DOWN   &msc MOVE_X(1100)  &msc MOVE_Y(-500)  &msc MOVE_X(500)
-                           &trans              &trans              &trans             &trans  &trans    &mkp RCLK &mkp LCLK         &mkp MCLK  &msc MOVE_X(-500)  &msc MOVE_Y(500)
+&trans      &trans      &trans              &mmv MOVE_UP   &trans             &trans                    &msc MOVE_Y(50)    &mkp LCLK       &mmv MOVE_Y(-1100)    &mkp RCLK        &kp INSERT      &trans
+ &trans      &mkp RCLK      &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans                    &msc MOVE_Y(-50)  &mmv MOVE_X(-1100)  &mmv MOVE_Y(1100)  &mmv MOVE_X(1100)  &mkp RCLK    &trans
+&trans      &mkp MCLK         &mkp RCLK           &mmv MOVE_Y(1100)  &mkp LCLK          &trans  &trans    &trans  &trans          &msc MOVE_X(-50)  &mmv MOVE_DOWN   &msc MOVE_X(50)  &msc MOVE_Y(30)  &msc MOVE_X(30)
+                           &trans              &trans              &trans             &trans  &trans    &mkp RCLK &mkp LCLK         &mkp MCLK  &msc MOVE_X(-30)  &msc MOVE_Y(-30)
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp PG_UP  PG_DN>;
+                <&scroll MOVE_X(-50) MOVE_X(50)>,
+                <&scroll MOVE_Y(50)  MOVE_Y(-50)>;
         };
     };
 };
