@@ -59,7 +59,7 @@
             key-positions = <0 12>;
         };
 
-        esc2 {
+        esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
@@ -69,7 +69,7 @@
             key-positions = <10 11>;
         };
 
-        del1 {
+        del {
             bindings = <&kp DELETE>;
             key-positions = <21 10>;
         };
@@ -77,19 +77,19 @@
     };
 
     behaviors {
-        hold_tap_keys: hold_tap_keys {
+        ht_holdpref: ht_holdpref {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
-           flavor = "hold-preferred";
+            flavor = "hold-preferred";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             hold-while-undecided;
         };
 
-        hold_tap_balanced: hold_tap_balanced {
+        ht_balanced: ht_balanced {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
-           flavor = "balanced";
+            flavor = "balanced";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             hold-while-undecided;
@@ -97,7 +97,6 @@
 
         sticky: sticky {
             compatible = "zmk,behavior-sticky-key";
-            label = "STICKY";
             bindings = <&kp>;
             #binding-cells = <1>;
             release-after-ms = <1000>;
@@ -106,30 +105,13 @@
 
         backspace_del: backspace_del {
             compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPACE_DEL";
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
-
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_LCTL|MOD_LALT|MOD_RSFT)>;
         };
 
-        scroll_vertical: scroll_vertical {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "SCROLL_VERTICAL";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-        };
-
-        scrol_horizontal: scrol_horizontal {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "SCROL_HORIZONTAL";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
-        };
-
-        hold_tap_layer_immediate: hold_tap_layer_immediate {
+        ht_layer: ht_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_LAYER_IMMEDIATE";
             bindings = <&mo>, <&kp>;
             flavor = "hold-preferred";
             #binding-cells = <2>;
@@ -139,7 +121,6 @@
 
        scroll: scroll {
             compatible = "zmk,behavior-sensor-rotate-var";
-            label = "SCROLL";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
             tap-ms = <150>;     
@@ -161,16 +142,14 @@
             display-name = "Base";
 
             bindings = <
-&kp NUMBER_1        &kp N2  &kp N3    &kp N4    &kp N5                                 &kp N6                                         &kp N7                       &kp N8          &kp N9          &kp N0        &kp MINUS               &kp EQUAL
-&kp TAB             &kp Q   &kp W     &kp E     &kp R                                  &kp T                                          &kp Y                        &kp U           &kp I           &kp O         &kp P                   &kp LEFT_BRACKET
-&sticky LEFT_SHIFT  &kp A   &kp S     &kp D     &kp F                                  &kp G                                          &kp H                        &kp J           &kp K           &kp L         &kp SEMI                &hold_tap_keys RIGHT_SHIFT NON_US_HASH
-&kp LCTRL           &kp Z   &kp X     &kp C     &kp V                                  &kp B               &kp C_MUTE  &kp CAPSLOCK   &kp N                        &kp M           &kp COMMA       &kp DOT       &kp SLASH               &kp RIGHT
-                            &kp LGUI  &kp LALT   &mo 1     &hold_tap_layer_immediate 3 KP_ENTER     &hold_tap_balanced LEFT_SHIFT SPACE   &backspace_del     &mo 2         &mo 1        &kp LEFT_ARROW      &kp LG(LS(M))   
+&kp NUMBER_1        &kp N2  &kp N3    &kp N4    &kp N5                          &kp N6                                         &kp N7                       &kp N8          &kp N9          &kp N0        &kp MINUS               &kp EQUAL
+&kp TAB             &kp Q   &kp W     &kp E     &kp R                           &kp T                                          &kp Y                        &kp U           &kp I           &kp O         &kp P                   &kp LEFT_BRACKET
+&sticky LEFT_SHIFT  &kp A   &kp S     &kp D     &kp F                           &kp G                                          &kp H                        &kp J           &kp K           &kp L         &kp SEMI                &ht_holdpref RIGHT_SHIFT NON_US_HASH
+&kp LCTRL           &kp Z   &kp X     &kp C     &kp V                           &kp B               &kp C_MUTE  &kp CAPSLOCK   &kp N                        &kp M           &kp COMMA       &kp DOT       &kp SLASH               &kp RIGHT
+                            &kp LGUI  &kp LALT  &mo 1    &ht_layer 3 KP_ENTER   &ht_balanced LEFT_SHIFT SPACE   &backspace_del     &mo 2         &mo 1        &kp LEFT_ARROW      &kp LG(LS(M))   
             >;
 
-            sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&scroll MOVE_Y(50)  MOVE_Y(-50)>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll MOVE_Y(50)  MOVE_Y(-50)>;
         };
 
         alt_gr_fn_layer {
@@ -193,11 +172,11 @@
             display-name = "navi";
 
             bindings = <
-&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &trans        &trans      &trans         &trans             &trans
-&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &kp HOME        &kp UP      &kp END         &kp PG_UP             &trans
-&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &kp LEFT      &kp DOWN    &kp RIGHT         &kp PG_DN             &trans
-&trans  &trans            &trans            &trans          &trans      &trans                       &trans      &trans         &kp INSERT      &trans         &trans            &trans
-                          &trans            &trans          &trans      &trans     &trans    &trans  &trans      &trans      &trans         &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &trans         &trans      &trans      &trans         &trans             &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &kp DELETE     &kp HOME    &kp UP      &kp END         &kp PG_UP             &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &kp BACKSPACE  &kp LEFT    &kp DOWN    &kp RIGHT         &kp PG_DN             &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &trans         &trans      &kp INSERT      &trans         &trans            &trans
+                          &trans            &trans          &trans      &trans     &trans    &trans  &trans         &trans      &trans         &trans
             >;
 
             sensor-bindings =
