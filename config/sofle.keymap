@@ -156,7 +156,7 @@
 &kp LEFT_SHIFT  &htl_b 3 A   &kp S     &kp D     &kp F   &kp G                                                    &kp H         &kp J   &kp K           &kp L          &htl_b 2 SEMI   &ht_h RIGHT_SHIFT NON_US_HASH
 &kp LCTRL       &kp Z        &kp X     &kp C     &kp V   &kp B              &kp C_MUTE              &kp CAPSLOCK  &kp N         &kp M   &kp COMMA       &kp DOT        &kp SLASH       &kp RIGHT
                              &kp LGUI  &kp LALT  &mo 1   &htl_h 3 KP_ENTER  &ht_b LEFT_SHIFT SPACE  &bs_del       &mo 2         &mo 1   &kp LEFT_ARROW  &kp LG(LS(M))          
-            >;l
+            >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll MOVE_Y(50)  MOVE_Y(-50)>;
         };
