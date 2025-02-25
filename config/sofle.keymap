@@ -77,7 +77,7 @@
     };
 
     behaviors {
-        ht_holdpref: ht_holdpref {
+        ht_h: ht_h {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
             flavor = "hold-preferred";
@@ -86,7 +86,7 @@
             hold-while-undecided;
         };
 
-        ht_balanced: ht_balanced {
+        ht_b: ht_b {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
             flavor = "balanced";
@@ -103,17 +103,26 @@
             quick-release;
         };
 
-        backspace_del: backspace_del {
+        bs_del: bs_del {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_LCTL|MOD_LALT|MOD_RSFT)>;
         };
 
-        ht_layer: ht_layer {
+        htl_h: htl_h {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&kp>;
             flavor = "hold-preferred";
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            hold-while-undecided;
+        };
+
+        htl_b: htl_b {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&mo>, <&kp>;
+            flavor = "balanced";
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             hold-while-undecided;
@@ -142,12 +151,12 @@
             display-name = "Base";
 
             bindings = <
-&kp NUMBER_1        &kp N2  &kp N3    &kp N4    &kp N5                          &kp N6                                         &kp N7        &kp N8     &kp N9          &kp N0        &kp MINUS               &kp EQUAL
-&kp TAB             &kp Q   &kp W     &kp E     &kp R                           &kp T                                          &kp Y         &kp U      &kp I           &kp O         &kp P                   &kp LEFT_BRACKET
-&sticky LEFT_SHIFT  &kp A   &kp S     &kp D     &kp F                           &kp G                                          &kp H         &kp J      &kp K           &kp L         &kp SEMI                &ht_holdpref RIGHT_SHIFT NON_US_HASH
-&kp LCTRL           &kp Z   &kp X     &kp C     &kp V                           &kp B               &kp C_MUTE  &kp CAPSLOCK   &kp N         &kp M      &kp COMMA       &kp DOT       &kp SLASH               &kp RIGHT
-                            &kp LGUI  &kp LALT  &mo 1    &ht_layer 3 KP_ENTER   &ht_balanced LEFT_SHIFT SPACE   &backspace_del &mo 2         &mo 1      &kp LEFT_ARROW  &kp LG(LS(M))          
-            >;
+&kp NUMBER_1    &kp N2       &kp N3    &kp N4    &kp N5  &kp N6                                                   &kp N7        &kp N8  &kp N9          &kp N0         &kp MINUS       &kp EQUAL
+&kp TAB         &kp Q        &kp W     &kp E     &kp R   &kp T                                                    &kp Y         &kp U   &kp I           &kp O          &kp P           &kp LEFT_BRACKET
+&kp LEFT_SHIFT  &htl_b 3 A   &kp S     &kp D     &kp F   &kp G                                                    &kp H         &kp J   &kp K           &kp L          &htl_b 2 SEMI   &ht_h RIGHT_SHIFT NON_US_HASH
+&kp LCTRL       &kp Z        &kp X     &kp C     &kp V   &kp B              &kp C_MUTE              &kp CAPSLOCK  &kp N         &kp M   &kp COMMA       &kp DOT        &kp SLASH       &kp RIGHT
+                             &kp LGUI  &kp LALT  &mo 1   &htl_h 3 KP_ENTER  &ht_b LEFT_SHIFT SPACE  &bs_del       &mo 2         &mo 1   &kp LEFT_ARROW  &kp LG(LS(M))          
+            >;l
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll MOVE_Y(50)  MOVE_Y(-50)>;
         };
@@ -172,11 +181,11 @@
             display-name = "navi";
 
             bindings = <
-&trans  &trans            &trans            &trans          &trans      &trans                       &trans         &trans      &trans      &trans         &trans             &trans
-&trans  &trans            &trans            &trans          &trans      &trans                       &kp DELETE     &kp HOME    &kp UP      &kp END         &kp PG_UP             &trans
-&trans  &trans            &trans            &trans          &trans      &trans                       &kp BACKSPACE  &kp LEFT    &kp DOWN    &kp RIGHT         &kp PG_DN             &trans
-&trans  &trans            &trans            &trans          &trans      &trans                       &trans         &trans      &kp INSERT      &trans         &trans            &trans
-                          &trans            &trans          &trans      &trans     &trans    &trans  &trans         &trans      &trans         &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &trans         &trans      &trans      &trans        &trans     &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &kp DELETE     &kp HOME    &kp UP      &kp END       &kp PG_UP  &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &kp BACKSPACE  &kp LEFT    &kp DOWN    &kp RIGHT     &trans     &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &trans         &kp PG_UP   &kp INSERT  &kp PG_DOWN   &trans     &trans
+                          &trans            &trans          &trans      &trans     &trans    &trans  &trans         &trans      &trans      &trans
             >;
 
             sensor-bindings =
@@ -186,11 +195,11 @@
 
         mouse {
             bindings = <
-&kp F1   &kp F2      &kp F3              &kp F4              &kp F5             &kp F6                       &kp F7           &kp F8             &kp F9              &kp F10            &kp F11          &kp F12
-&trans   &trans      &mkp RCLK          &mmv MOVE_Y(-1100)  &mkp LCLK           &trans                       &msc MOVE_Y(17)  &mkp LCLK          &mmv MOVE_Y(-1100)  &mkp RCLK          &kp INSERT       &trans
-&trans   &mkp RCLK   &mmv MOVE_X(-1100) &mmv MOVE_Y(1100)   &mmv MOVE_X(1100)  &mkp LCLK                    &msc MOVE_Y(-17) &mmv MOVE_X(-1100) &mmv MOVE_Y(1100)   &mmv MOVE_X(1100)  &mkp RCLK        &trans
-&trans   &mkp MCLK   &mkp RCLK          &mmv MOVE_Y(1100)   &mkp LCLK          &trans      &trans  &trans    &trans           &msc MOVE_X(-17)   &mmv MOVE_DOWN      &msc MOVE_X(17)    &msc MOVE_Y(20)  &msc MOVE_X(20)
-                     &trans              &trans             &trans             &trans     &trans  &mkp RCLK &mkp LCLK        &mkp MCLK          &msc MOVE_X(-20)    &msc MOVE_Y(-20)
+&kp F1   &kp F2      &kp F3             &kp F4              &kp F5             &kp F6                           &kp F7           &kp F8             &kp F9              &kp F10            &kp F11          &kp F12
+&trans   &trans      &mkp RCLK          &mmv MOVE_Y(-1100)  &mkp LCLK          &trans                           &msc MOVE_Y(17)  &mkp LCLK          &mmv MOVE_Y(-1100)  &mkp RCLK          &kp INSERT       &trans
+&trans   &trans      &mmv MOVE_X(-1100) &mmv MOVE_Y(1100)   &mmv MOVE_X(1100)  &mkp LCLK                        &msc MOVE_Y(-17) &mmv MOVE_X(-1100) &mmv MOVE_Y(1100)   &mmv MOVE_X(1100)  &mkp RCLK        &trans
+&trans   &mkp MCLK   &mkp RCLK          &mmv MOVE_Y(1100)   &mkp LCLK          &trans      &trans     &trans    &trans           &msc MOVE_X(-17)   &mmv MOVE_DOWN      &msc MOVE_X(17)    &msc MOVE_Y(20)  &msc MOVE_X(20)
+                     &trans             &trans              &mkp MCLK          &mkp LCLK   &mkp RCLK  &mkp RCLK &mkp LCLK        &mkp MCLK          &msc MOVE_X(-20)    &msc MOVE_Y(-20)
             >;
 
             sensor-bindings =
@@ -199,3 +208,4 @@
         };
     };
 };
+čč
