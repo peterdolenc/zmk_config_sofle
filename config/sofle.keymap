@@ -184,7 +184,7 @@
 &trans  &trans            &trans            &trans          &trans      &trans                       &trans         &trans      &trans      &trans        &trans     &trans
 &trans  &trans            &trans            &trans          &trans      &trans                       &kp DELETE     &kp HOME    &kp UP      &kp END       &kp PG_UP  &trans
 &trans  &trans            &trans            &trans          &trans      &trans                       &kp BACKSPACE  &kp LEFT    &kp DOWN    &kp RIGHT     &trans     &trans
-&trans  &trans            &trans            &trans          &trans      &trans                       &trans         &kp PG_UP   &kp INSERT  &kp PG_DOWN   &trans     &trans
+&trans  &trans            &trans            &trans          &trans      &trans                       &trans         &kp PG_UP   &kp INSERT  &kp PG_DN     &trans     &trans
                           &trans            &trans          &trans      &trans     &trans    &trans  &trans         &trans      &trans      &trans
             >;
 
