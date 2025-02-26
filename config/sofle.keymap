@@ -201,7 +201,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans         &trans      &trans      &trans        &trans      &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans         &kp HOME    &kp UP      &kp END       &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp BACKSPACE  &kp LEFT    &kp DOWN    &kp RIGHT     &kp DELETE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                 &kp BACKSPACE  &kp LEFT    &kp DOWN    &kp RIGHT     &kp DELETE  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans         &kp PG_UP   &kp INSERT  &kp PG_DN     &trans      &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans      &trans      &trans
             >;
@@ -214,9 +214,9 @@
         mouse {
             bindings = <
 &kp F1   &kp F2      &kp F3             &kp F4              &kp F5             &kp F6                           &kp F7           &kp F8             &kp F9              &kp F10            &kp F11          &kp F12
-&trans   &mkp RCLK   &mkp RCLK          &mmv MOVE_Y(-1100)  &mkp LCLK          &trans                           &msc MOVE_Y(17)  &mkp LCLK          &mmv MOVE_Y(-1100)  &mkp RCLK          &kp INSERT       &trans
-&trans   &mkp RCLK   &mmv MOVE_X(-1100) &mmv MOVE_Y(1100)   &mmv MOVE_X(1100)  &mkp LCLK                        &msc MOVE_Y(-17) &mmv MOVE_X(-1100) &mmv MOVE_Y(1100)   &mmv MOVE_X(1100)  &mkp RCLK        &trans
-&trans   &mkp MCLK   &mkp RCLK          &mmv MOVE_Y(1100)   &mkp LCLK          &trans      &trans     &trans    &trans           &msc MOVE_X(-17)   &mmv MOVE_DOWN      &msc MOVE_X(17)    &msc MOVE_Y(20)  &msc MOVE_X(20)
+&trans   &mkp RCLK   &mkp RCLK          &mmv MOVE_Y(-1000)  &mkp LCLK          &trans                           &msc MOVE_Y(17)  &mkp LCLK          &mmv MOVE_Y(-1100)  &mkp RCLK          &kp INSERT       &trans
+&trans   &mkp LCLK   &mmv MOVE_X(-1000) &mmv MOVE_Y(1000)   &mmv MOVE_X(1000)  &mkp LCLK                        &msc MOVE_Y(-17) &mmv MOVE_X(-1100) &mmv MOVE_Y(1100)   &mmv MOVE_X(1100)  &mkp RCLK        &trans
+&trans   &mkp MCLK   &mkp RCLK          &mmv MOVE_Y(1000)   &mkp LCLK          &trans      &trans     &trans    &trans           &msc MOVE_X(-17)   &mmv MOVE_DOWN      &msc MOVE_X(17)    &msc MOVE_Y(20)  &msc MOVE_X(20)
                      &trans             &trans              &mkp MCLK          &mkp LCLK   &mkp RCLK  &mkp RCLK &mkp LCLK        &mkp MCLK          &msc MOVE_X(-20)    &msc MOVE_Y(-20)
             >;
 
