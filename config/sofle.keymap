@@ -62,8 +62,8 @@
         };
 
         esc2 {
-            bindings = <&kp ESCAPE>>;
-            key-positions = <29 32;
+            bindings = <&kp ESCAPE>;
+            key-positions = <29 32>;
         };
 
         caps-word {
