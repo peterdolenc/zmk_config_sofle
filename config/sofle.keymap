@@ -241,7 +241,7 @@
 &kp F1      &kp F2        &kp F3            &kp F4          &kp F5      &kp F6                           &kp F7      &kp F8        &kp F9         &kp F10        &kp F11            &kp F12
 &trans      &kp LS(N1)    &kp LS(N2)        &kp LS(N3)      &kp LS(N4)  &kp LS(N5)                       &kp LS(N6)  &kp LS(N7)    &kp LS(N8)     &kp LS(N9)     &kp LS(N0)         &kp LS(EQUAL)      
 &kp ESC     &kp N1        &kp N2            &kp N3          &kp N4      &kp N5                           &kp N6      &kp N7        &kp N8         &kp N9         &kp N0             &kp EQUAL          
-&kp RA(Q)   &kp RA(W)     &kp RA(F)         &kp RA(G)       &kp RA(V)   &kp RA(B)  &trans    &trans      &kp RA(N)   &kp RA(E)     &kp RA(COMMA)  &kp RA(DOT)    &kp MINUS          &kp LS(sv) 
+&kp RA(Q)   &kp RA(W)     &kp RA(F)         &kp RA(G)       &kp RA(V)   &kp RA(B)  &trans    &trans      &kp RA(N)   &kp RA(E)     &kp RA(COMMA)  &kp RA(DOT)    &kp MINUS          &kp LS(MINUS) 
                           &trans            &trans          &trans      &trans     &trans    &trans      &trans      &trans        &trans         &trans
             >;
 
