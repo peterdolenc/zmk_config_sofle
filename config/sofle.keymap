@@ -13,6 +13,9 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
+&mmv {
+    time-to-max-speed-ms = <200>;
+};
 
 / {
     combos {
@@ -232,10 +235,10 @@
         mouse {
             bindings = <
 &trans       &trans  &trans  &trans  &trans  &trans                      &trans           &trans             &trans              &trans             &trans           &trans
-&kp LA(TAB)  &trans   &trans  &trans  &trans  &trans                    &msc MOVE_Y(17)  &mkp LCLK           &mmv MOVE_UP         &mkp RCLK           &kp INSERT       &trans
-&trans       &trans   &trans  &trans  &trans  &trans                    &msc MOVE_Y(-17) &mmvf MOVE_LEFT     &mmvf MOVE_DOWN      &mmvf MOVE_RIGHT    &mkp RCLK        &trans
-&trans       &trans   &trans  &trans  &trans  &trans  &trans  &trans    &trans           &msc MOVE_X(-17)    &mmvf MOVE_DOWN      &msc MOVE_X(17)     &msc MOVE_Y(20)  &msc MOVE_X(20)
-                      &trans  &trans  &trans  &trans  &trans  &mkp RCLK &mkp LCLK        &mkp MCLK           &msc MOVE_X(-20)     &msc MOVE_Y(-20)
+&kp LA(TAB)  &trans   &trans  &trans  &trans  &trans                    &msc MOVE_Y(17)  &mkp LCLK           &mmv MOVE_UP        &mkp RCLK          &kp INSERT       &trans
+&trans       &trans   &trans  &trans  &trans  &trans                    &msc MOVE_Y(-17) &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT    &mkp RCLK        &trans
+&trans       &trans   &trans  &trans  &trans  &trans  &trans  &trans    &trans           &msc MOVE_X(-17)    &trans              &msc MOVE_X(17)    &msc MOVE_Y(20)  &msc MOVE_X(20)
+                      &trans  &trans  &trans  &trans  &trans  &mkp RCLK &mkp LCLK        &mkp MCLK           &msc MOVE_X(-20)    &msc MOVE_Y(-20)
             >;
 
             sensor-bindings =
