@@ -84,11 +84,20 @@
             key-positions = <10 11>;
         };
 
-        left_backspace {
-            bindings = <&kp BACKSPACE>;
+        mouse {
+            bindings = <&mo 3>;
             key-positions = <27 28>;
         };
 
+        left_backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <15 16>;
+        };
+
+        alt_tab {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <26 27>;
+        };
 
         del {
             bindings = <&kp DELETE>;
@@ -97,7 +106,7 @@
 
         left_del {
             bindings = <&kp DELETE>;
-            key-positions = <26 27>;
+            key-positions = <14 15>;
         };
 
     };
@@ -208,7 +217,7 @@
 &kp TAB         &kp Q        &kp W       &kp E       &kp R         &kp T                                                 &kp Y          &kp U            &kp I           &kp O          &kp P            &kp LEFT_BRACKET
 &kp LSHIFT      &hm LCTRL A  &hm LGUI S  &hm RALT D  &hm LSHIFT F  &kp G                                                 &kp H          &hm RSHIFT J     &hm RALT K      &hm RGUI L     &hm RCTRL SEMI   &kp NON_US_HASH
 &kp LCTRL       &hm LGUI Z   &kp X       &kp C       &hm LCTRL V   &kp B           &kp C_MUTE              &kp CAPSLOCK  &kp N          &kp M            &kp COMMA       &kp DOT        &kp SLASH        &kp LC(LS(M)) 
-                             &kp LGUI    &kp LALT    &mo 1         &htl_h 3 ENTER  &ht_b LEFT_SHIFT SPACE  &bs_del       &htl_h 2 TAB   &mo 1            &kp ESC         &kp INSERT         
+                             &kp LGUI    &kp LALT    &mo 3         &htl_h 1 ENTER  &ht_b LEFT_SHIFT SPACE  &bs_del       &htl_h 2 TAB   &mo 1            &kp ESC         &kp INSERT         
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll MOVE_Y(50)  MOVE_Y(-50)>;
