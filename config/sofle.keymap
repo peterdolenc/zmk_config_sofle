@@ -66,7 +66,12 @@
 
         esc2 {
             bindings = <&kp ESCAPE>;
-            key-positions = <29 32>;
+            key-positions = <32 33>;
+        };
+
+        select-all {
+            bindings = <&kp LC(A)>;
+            key-positions = <31 32>;
         };
 
         caps-word {
@@ -79,9 +84,20 @@
             key-positions = <10 11>;
         };
 
+        left_backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <27 28>;
+        };
+
+
         del {
             bindings = <&kp DELETE>;
             key-positions = <21 10>;
+        };
+
+        left_del {
+            bindings = <&kp DELETE>;
+            key-positions = <26 27>;
         };
 
     };
