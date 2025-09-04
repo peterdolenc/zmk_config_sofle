@@ -96,17 +96,22 @@
 
         alt_tab {
             bindings = <&kp LA(TAB)>;
-            key-positions = <26 27>;
+            key-positions = <14 15>;
+        };
+
+        alt_tab2 {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <13 14>;
+        };
+
+        alt_tab3 {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <12 13>;
         };
 
         del {
             bindings = <&kp DELETE>;
             key-positions = <21 10>;
-        };
-
-        left_del {
-            bindings = <&kp DELETE>;
-            key-positions = <14 15>;
         };
 
     };
