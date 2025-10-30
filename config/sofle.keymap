@@ -296,11 +296,11 @@
             display-name = "Numpad";
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &MINUS  &kp N4  &kp N5  &kp N6  &MINUS                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N0  &kp N1  &kp N2  &kp N3  &EQUAL                  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp MINUS                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N0     &kp N1  &kp N2  &kp N3  &kp EQUAL                  &trans  &trans  &trans  &trans  &trans  &trans
+                   &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
