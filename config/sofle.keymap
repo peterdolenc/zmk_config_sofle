@@ -250,11 +250,11 @@
             display-name = "Base";
 
             bindings = <
-&kp NUMBER_1    &kp N2       &kp N3      &kp N4        &kp N5        &kp N6                                                &kp N7         &kp N8           &kp N9            &kp N0         &kp MINUS        &kp EQUAL
-&kp TAB         &kp Q        &kp W       &kp E         &kp R         &kp T                                                 &kp Y          &kp U            &kp I             &kp O          &kp P            &kp LEFT_BRACKET
-&kp LSHIFT      &hm LCTRL A  &htl_t 4 S  &hm RALT D    &hm LALT F    &kp G                                                 &kp H          &hm LALT J       &hm RALT K        &htl_t 5 L     &qu_excl         &kp NON_US_HASH
-&kp LCTRL       &hm LGUI Z   &kp X       &hm LSHIFT C  &hm LCTRL V   &kp B           &kp C_MUTE              &kp CAPSLOCK  &kp N          &kp M            &hm LSHIFT COMMA  &kp DOT        &kp SLASH        &kp LC(LS(M)) 
-                             &kp LGUI    &kp LALT      &mo 3         &htl_h 2 ENTER  &ht_b LEFT_SHIFT SPACE  &bs_del       &mo 3          &kp ESC          &kp LC(A)         &kp INSERT         
+&kp N1      &kp N2       &kp N3      &kp N4        &kp N5        &kp N6                                                &kp N7         &kp N8           &kp N9            &kp N0         &kp MINUS        &kp EQUAL
+&kp TAB     &kp Q        &htl_t 2 W  &hm LALT E    &hm LSHIFT R  &kp T                                                 &kp Y          &kp U            &kp I             &kp O          &kp P            &kp LEFT_BRACKET
+&kp LSHIFT  &hm LCTRL A  &htl_t 6 S  &hm RALT D    &htl_t 4 F    &kp G                                                 &kp H          &htl_t 5 J       &kp K             &htl_t 6 L     &qu_excl         &kp NON_US_HASH
+&kp LCTRL   &hm LGUI Z   &kp X       &hm LSHIFT C  &hm LCTRL V   &kp B           &kp C_MUTE              &kp CAPSLOCK  &kp N          &kp M            &hm LSHIFT COMMA  &kp DOT        &kp SLASH        &kp LC(LS(M)) 
+                         &kp LGUI    &kp LALT      &mo 5         &htl_h 6 ENTER  &ht_b LEFT_SHIFT SPACE  &bs_del       &mo 3          &mo 2            &mo 7             &kp INSERT         
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>, <&scroll MOVE_Y(50)  MOVE_Y(-50)>;
@@ -274,14 +274,14 @@
 
 
         /* 2 */
-        nums_fn_layer {
-            display-name = "Nums/FN";
+        fn-pad {
+            display-name = "Fn Pad";
             bindings = <
-&kp F1  &kp F2            &kp F3            &kp F4          &kp F5      &kp F6                          &kp F7      &kp F8        &kp F9         &kp F10        &kp F11            &kp F12
-&kp LS(N1)  &kp LS(N2)    &kp LS(N3)        &kp LS(N4)      &kp LS(N5)  &kp LS(N6)                      &kp LS(N7)  &kp LS(N8)    &kp LS(N9)     &kp LS(N0)     &kp LS(MINUS)      &kp LS(EQUAL) 
-&kp N1      &kp N2        &kp N3            &kp N4          &kp N5      &kp N6                          &kp N7      &kp N8        &kp N9         &kp N0         &kp MINUS          &kp EQUAL
-&kp F1  &kp F2            &kp F3            &kp F4          &kp F5      &kp F6     &trans    &trans     &kp F7      &kp F8        &kp F9         &kp F10        &kp F11            &kp F12
-                          &trans            &trans          &trans      &trans     &trans    &trans     &kp LA(TAB) &trans        &trans         &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                  &kp F7  &kp F8  &kp F9   &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp F9  &kp F10  &kp F11  &kp F12   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp F5  &kp F6   &kp F7   &kp F8    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp F1  &kp F2   &kp F3   &kp F4    &trans
+                   &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -291,9 +291,9 @@
             display-name = "navi";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &kp ESC        &trans      &trans      &trans        &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans         &kp HOME    &kp UP      &kp END       &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &kp BACKSPACE  &kp LEFT    &kp DOWN    &kp RIGHT     &kp DELETE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans         &kp PG_UP   &trans      &kp PG_DN     &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp DELETE     &kp HOME    &kp UP      &kp END       &PG_UP      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp BACKSPACE  &kp LEFT    &kp DOWN    &kp RIGHT     &kp PG_DN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans         &trans      &trans      &trans        &trans      &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans      &trans      &trans
             >;
 
@@ -319,35 +319,48 @@
         numpad {
             display-name = "Numpad";
             bindings = <
-&trans  &trans     &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp MINUS                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N0     &kp N1  &kp N2  &kp N3  &kp EQUAL                  &trans  &trans  &trans  &trans  &trans  &trans
+&kp F1  &kp F2     &kp F3  &kp F4  &kp F5  &kp F6                  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp EQUAL               &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &kp MINUS  &kp N4  &kp N5  &kp N6  &kp MINUS               &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &kp N0     &kp N1  &kp N2  &kp N3  &kp N0                  &trans  &trans  &trans  &trans   &trans   &trans
                    &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         /* 6 */
-
-/*
-     *  |  &  /   #    ^   {  }  '  `
-     !  =  <  >   %    $   (  )  "  ?
-     ~  +  [  ]   @    €   \  ;  :  _
-*/
-
         symbol {
             display-name = "Symbol";
             bindings = <
-&trans  &trans         &trans       &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(EQUAL)  &kp RALT(W)  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LS(N1)     &kp LS(0)    &kp N8  &kp N9  &kp N0                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp RALT(N1)   &kp EQUAL    &kp N5  &kp N6  &kp MINUS                  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans         &trans       &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&kp F1  &kp F2         &kp F3         &kp F4         &kp F5       &kp F6                     &kp F7     &kp F8     &kp F9         &kp F10      &kp F11        &kp F12
+&trans  &kp LS(N1)     &kp RA(3)      &kp  RA(W)     &kp LS(6)    &kp LS(3)                  &kp LS(4)  &kp RA(B)  &kp RA(N)      &kp EQUAL    &kp RA(N7)     &trans
+&trans  &kp LS(0)      &kp LS(MINUS)  &kp RA(COMMA)  &kp RA(DOT)  &kp LS(7)                  &kp LS(5)  &kp LS(8)  &kp LS(9)      &kp LS(N2)   &kp MINUS      &trans
+&trans  &kp LS(EQUAL)  &kp RA(N1)     &kp RA(F)      &kp RA(G)    &kp RA(V)                  &kp RA(E)  &kp RA(Q)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)  &trans
+                       &trans         &trans         &trans       &trans     &trans  &trans  &trans     &trans     &trans         &trans
             >;
         };
 
+        /* 7 */
+        nums_fn_layer {
+            display-name = "Nums/FN";
+            bindings = <
+&kp F1  &kp F2            &kp F3            &kp F4          &kp F5      &kp F6                          &kp F7      &kp F8        &kp F9         &kp F10        &kp F11            &kp F12
+&kp LS(N1)  &kp LS(N2)    &kp LS(N3)        &kp LS(N4)      &kp LS(N5)  &kp LS(N6)                      &kp LS(N7)  &kp LS(N8)    &kp LS(N9)     &kp LS(N0)     &kp LS(MINUS)      &kp LS(EQUAL) 
+&kp N1      &kp N2        &kp N3            &kp N4          &kp N5      &kp N6                          &kp N7      &kp N8        &kp N9         &kp N0         &kp MINUS          &kp EQUAL
+&kp F1  &kp F2            &kp F3            &kp F4          &kp F5      &kp F6     &trans    &trans     &kp F7      &kp F8        &kp F9         &kp F10        &kp F11            &kp F12
+                          &trans            &trans          &trans      &trans     &trans    &trans     &kp LA(TAB) &trans        &trans         &trans
+            >;
+        };
 
-
+        symbol2 {
+            display-name = "Symbol2";
+            bindings = <
+&kp F1  &kp F2         &kp F3     &kp F4         &kp F5       &kp F6                     &kp F7     &kp F8     &kp F9         &kp F10      &kp F11        &kp F12
+&trans  &kp LS(EQUAL)  &kp RA(W)  &kp LS(6)      &kp LS(7)    &kp LS(3)                  &kp RA(3)  &kp RA(B)  &kp RA(N)      &kp MINUS    &kp RA(N7)     &trans
+&trans  &kp LS(N1)     &kp LS(0)  &kp RA(COMMA)  &kp RA(DOT)  &kp LS(5)                  &kp LS(4)  &kp LS(8)  &kp LS(9)      &kp LS(N2)   &kp LS(MINUS)  &trans
+&trans  &kp RA(N1)     &kp EQUAL  &kp RA(F)      &kp RA(G)    &kp RA(V)                  &kp RA(E)  &kp RA(7)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)  &trans
+                       &trans     &trans         &trans       &trans     &trans  &trans  &trans     &trans     &trans         &trans
+            >;
+        };
         
     };
 };
