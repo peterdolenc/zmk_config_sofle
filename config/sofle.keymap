@@ -310,7 +310,7 @@
 &kp LA(TAB)  &trans   &trans  &trans  &trans  &trans                    &msc MOVE_Y(17)  &mkp LCLK           &mmv MOVE_UP        &mkp RCLK          &kp INSERT       &trans
 &trans       &trans   &trans  &trans  &trans  &trans                    &msc MOVE_Y(-17) &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT    &mkp RCLK        &trans
 &trans       &trans   &trans  &trans  &trans  &trans  &trans  &trans    &trans           &msc MOVE_X(-17)    &trans              &msc MOVE_X(17)    &msc MOVE_Y(20)  &msc MOVE_X(20)
-                      &trans  &trans  &trans  &trans  &trans  &mkp RCLK &mkp LCLK        &mkp MCLK           &msc MOVE_X(-20)    &msc MOVE_Y(-20)
+                      &trans  &trans  &mkp MCLK   &mkp RCLK &mkp LCLK  &mkp RCLK &mkp LCLK        &mkp MCLK           &msc MOVE_X(-20)    &msc MOVE_Y(-20)
             >;
         };
 
@@ -332,8 +332,8 @@
             display-name = "Symbol";
             bindings = <
 &kp F1  &kp F2         &kp F3         &kp F4         &kp F5       &kp F6                     &kp F7     &kp F8     &kp F9         &kp F10      &kp F11        &kp F12
-&trans  &kp LS(N1)     &kp RA(3)      &kp  RA(W)     &kp LS(6)    &kp LS(3)                  &kp LS(4)  &kp RA(B)  &kp RA(N)      &kp EQUAL    &kp RA(N7)     &trans
-&trans  &kp LS(0)      &kp LS(MINUS)  &kp RA(COMMA)  &kp RA(DOT)  &kp LS(7)                  &kp LS(5)  &kp LS(8)  &kp LS(9)      &kp LS(N2)   &kp MINUS      &trans
+&trans  &kp LS(N1)     &kp RA(N3)      &kp  RA(W)     &kp LS(N6)    &kp LS(N3)                  &kp LS(N4)  &kp RA(B)  &kp RA(N)      &kp EQUAL    &kp RA(N7)     &trans
+&trans  &kp LS(N0)      &kp LS(MINUS)  &kp RA(COMMA)  &kp RA(DOT)  &kp LS(N7)                  &kp LS(N5)  &kp LS(N8)  &kp LS(N9)      &kp LS(N2)   &kp MINUS      &trans
 &trans  &kp LS(EQUAL)  &kp RA(N1)     &kp RA(F)      &kp RA(G)    &kp RA(V)                  &kp RA(E)  &kp RA(Q)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)  &trans
                        &trans         &trans         &trans       &trans     &trans  &trans  &trans     &trans     &trans         &trans
             >;
@@ -355,9 +355,9 @@
             display-name = "Symbol2";
             bindings = <
 &kp F1  &kp F2         &kp F3     &kp F4         &kp F5       &kp F6                     &kp F7     &kp F8     &kp F9         &kp F10      &kp F11        &kp F12
-&trans  &kp LS(EQUAL)  &kp RA(W)  &kp LS(6)      &kp LS(7)    &kp LS(3)                  &kp RA(3)  &kp RA(B)  &kp RA(N)      &kp MINUS    &kp RA(N7)     &trans
-&trans  &kp LS(N1)     &kp LS(0)  &kp RA(COMMA)  &kp RA(DOT)  &kp LS(5)                  &kp LS(4)  &kp LS(8)  &kp LS(9)      &kp LS(N2)   &kp LS(MINUS)  &trans
-&trans  &kp RA(N1)     &kp EQUAL  &kp RA(F)      &kp RA(G)    &kp RA(V)                  &kp RA(E)  &kp RA(7)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)  &trans
+&trans  &kp LS(EQUAL)  &kp RA(W)  &kp LS(6)      &kp LS(N7)    &kp LS(N3)                  &kp RA(N3)  &kp RA(B)  &kp RA(N)      &kp MINUS    &kp RA(N7)     &trans
+&trans  &kp LS(N1)     &kp LS(N0)  &kp RA(COMMA)  &kp RA(DOT)  &kp LS(N5)                  &kp LS(N4)  &kp LS(N8)  &kp LS(9)      &kp LS(N2)   &kp LS(MINUS)  &trans
+&trans  &kp RA(N1)     &kp EQUAL  &kp RA(F)      &kp RA(G)    &kp RA(V)                  &kp RA(E)  &kp RA(N7)  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)  &trans
                        &trans     &trans         &trans       &trans     &trans  &trans  &trans     &trans     &trans         &trans
             >;
         };
