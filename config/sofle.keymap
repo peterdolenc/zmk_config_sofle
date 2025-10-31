@@ -263,7 +263,6 @@
         /* 1 */
         slo {
             display-name = "Slovenian";
-            sensor-bindings = <&trans &trans>, <&trans &trans>;
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans    &trans
@@ -277,7 +276,6 @@
         /* 2 */
         nums_fn_layer {
             display-name = "Nums/FN";
-            sensor-bindings = <&trans &trans>, <&trans &trans>;
             bindings = <
 &kp F1  &kp F2            &kp F3            &kp F4          &kp F5      &kp F6                          &kp F7      &kp F8        &kp F9         &kp F10        &kp F11            &kp F12
 &kp LS(N1)  &kp LS(N2)    &kp LS(N3)        &kp LS(N4)      &kp LS(N5)  &kp LS(N6)                      &kp LS(N7)  &kp LS(N8)    &kp LS(N9)     &kp LS(N0)     &kp LS(MINUS)      &kp LS(EQUAL) 
@@ -307,7 +305,6 @@
 
         /* 4 */
         mouse {
-            sensor-bindings = <&trans &trans>, <&trans &trans>;
             bindings = <
 &trans       &trans  &trans  &trans  &trans  &trans                      &trans           &trans             &trans              &trans             &trans           &trans
 &kp LA(TAB)  &trans   &trans  &trans  &trans  &trans                    &msc MOVE_Y(17)  &mkp LCLK           &mmv MOVE_UP        &mkp RCLK          &kp INSERT       &trans
@@ -321,7 +318,6 @@
         /* 5 */
         numpad {
             display-name = "Numpad";
-            sensor-bindings = <&trans &trans>, <&trans &trans>;
             bindings = <
 &trans  &trans     &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                     &trans  &trans  &trans  &trans  &trans  &trans
@@ -334,7 +330,6 @@
         /* 6 */
         symbol {
             display-name = "Symbol";
-            sensor-bindings = <&trans &trans>, <&trans &trans>;
             bindings = <
 &trans  &trans     &trans  &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp EQUAL  &kp N7  &kp N8  &kp N9  &kp N0                     &trans  &trans  &trans  &trans  &trans  &trans
